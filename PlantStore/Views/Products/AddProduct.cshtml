@@ -1,0 +1,43 @@
+﻿@using PlantStore.DTOs
+@model ProductViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Add Product</h1>
+        <form asp-action="AddProduct" method="post" enctype="multipart/form-data">
+            <div>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" placeholder="Enter Product Name" type="text" />
+            </div>
+            <div>
+                <label asp-for="Description"></label>
+                <input asp-for="Description" placeholder="Enter Description" type="text" />
+            </div>
+            <div>
+                <label asp-for="Price"></label>
+                <input asp-for="Price" placeholder="Enter Description" type="number" />
+            </div>
+            <div>
+                <label asp-for="Stock"></label>
+                <input asp-for="Stock" placeholder="Enter the Stock" type="number" />
+            </div>
+            <div>
+                <label asp-for="Picture"></label>
+                <input class="input-file" type="file" id="picture" asp-for="Picture" />
+            </div>
+            
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+</body>
+</html>
+
