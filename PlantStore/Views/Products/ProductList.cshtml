@@ -1,0 +1,37 @@
+﻿@model IEnumerable<PlantStore.DTOs.ProductDisplayViewModel>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var p in Model)
+            {
+                <tr>
+                    <td>@p.Name</td>
+                    <td>@p.Description</td>
+                    <td>@p.Price</td>
+                    <td>@p.Stock</td>
+                    <td>@p..PictureFormat" width="80" height="80"</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
