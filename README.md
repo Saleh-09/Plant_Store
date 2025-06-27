@@ -47,5 +47,5 @@ PlantStore.Models # Entity models (shared across layers)
    Update-Database -StartupProject PlantStore -Project PlantStore.DataAccess
 3. **Run the Application**
 
-   -Set PlantStore as the startup project.
-   -Hit F5 or Ctrl + F5 to run in browser.
+   - Set PlantStore as the startup project.
+   - Hit F5 or Ctrl + F5 to run in browser.
