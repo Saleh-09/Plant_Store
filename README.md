@@ -4,13 +4,13 @@ A simple and elegant e-commerce web application for selling plants online. Users
 
 ---
 
-## 🔧 Tech Stack
+## 🚀 Technologies Used
 
-- **Frontend:** ASP.NET MVC (Razor Views, Bootstrap)
-- **Backend:** ASP.NET MVC (Controllers & Services)
-- **Database:** SQL Server
-- **ORM:** Entity Framework Core (Code First)
-- **Architecture:** 3-Tier (Presentation, Business, Data Access Layers using Class Libraries)
+![ASP.NET](https://img.shields.io/badge/ASP.NET%20MVC-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![Entity Framework](https://img.shields.io/badge/Entity%20Framework-512BD4?style=for-the-badge&logo=.net&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+
 
 ---
 
