@@ -42,7 +42,7 @@ PlantStore.Models # Entity models (shared across layers)
 2. **Set up the Database**
    Update the appsettings.json connection string in PlantStore project.
    Run migrations from PlantStore.DataAccess project:
-   
+    ```bash
    Add-Migration Init -StartupProject PlantStore -Project PlantStore.DataAccess
    Update-Database -StartupProject PlantStore -Project PlantStore.DataAccess
 3. **Run the Application**
