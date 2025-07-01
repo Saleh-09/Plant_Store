@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PlantStore.DataAccess.Data;
 using PlantStore.DTOs;
 using PlantStore.Models.Models;
 
 namespace PlantStore.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class CategoriesController : Controller
     {
         private readonly StoreDbContext _context;

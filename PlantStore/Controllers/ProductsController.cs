@@ -1,4 +1,5 @@
 ﻿using Azure.Core.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using PlantStore.DataAccess.Data;
@@ -7,6 +8,7 @@ using PlantStore.Models.Models;
 namespace PlantStore.Controllers
 
 {
+    [Authorize(Roles = "admin")]
     public class ProductsController : Controller
     {
         private readonly StoreDbContext _context;
