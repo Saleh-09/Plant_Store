@@ -1,37 +1,43 @@
 ﻿@model IEnumerable<PlantStore.DTOs.ProductDisplayViewModel>
-@{
-    Layout = null;
-}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="~/css/productlist.css" />
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Stock</th>
-                <th>Image</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach(var p in Model)
+    <div class="product-list-container">
+        <div class="product-list-header">
+            <h1 class="product-list-title">Product List</h1>
+            <form method="get" asp-action="ProductList" class="filter-form">
+                <select name="categoryId" class="filter-dropdown">
+                    <option value="0">All Categories</option>
+                    @foreach (var cat in (IEnumerable<SelectListItem>)ViewBag.Categories)
+                    {
+                        var selected = (ViewBag.SelectedCategory == int.Parse(cat.Value)) ? "selected" : "";
+                        <option value="@cat.Value" selected>@cat.Text</option>
+                    }
+                </select>
+                <button type="submit" class="filter-btn">Filter</button>
+            </form>
+            <a asp-action="AddProduct" class="add-product-btn">Add New Product</a>
+        </div>
+        
+        <div class="product-grid">
+            @foreach (var product in Model)
             {
-                <tr>
-                    <td>@p.Name</td>
-                    <td>@p.Description</td>
-                    <td>@p.Price</td>
-                    <td>@p.Stock</td>
-                    <td>@p..PictureFormat" width="80" height="80"</td>
-                </tr>
+                <div class="product-card">
+                    <img class="product-image" src="@product.PictureFormat" alt="@product.Name" />
+                    <div class="product-name">@product.Name</div>
+                    <div class="product-description">@product.Description</div>
+                    <div class="product-price">Price: Rs @product.Price</div>
+                    <div class="product-stock">Stock: @product.Stock</div>
+                </div>
             }
-        </tbody>
-    </table>
+        </div>
+    </div>
 </body>
 </html>
