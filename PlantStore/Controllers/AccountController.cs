@@ -40,7 +40,14 @@ namespace PlantStore.Controllers
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-            return RedirectToAction("ProductList", "Products");
+            if (user.Role == "admin")
+            {
+                return RedirectToAction("ProductList", "Products");
+            }
+            else
+            {
+                return RedirectToAction("UserProductList", "Customer");
+            }
         }
 
         public async Task<IActionResult> Logout()
