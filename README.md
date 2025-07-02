@@ -16,9 +16,9 @@ A simple and elegant e-commerce web application for selling plants online. Users
 
 ## 📂 Project Structure
 
-- PlantStore.Models # Entity models (shared across layers)
+- PlantStore.Models     # Entity models (shared across layers)
 - PlantStore.DataAccess # EF Core DbContext and Repositories
-- PlantStore # ASP.NET MVC Web App (Presentation Layer)
+- PlantStore            # ASP.NET MVC Web App (Presentation Layer)
 
 ## ✅ Features
 
