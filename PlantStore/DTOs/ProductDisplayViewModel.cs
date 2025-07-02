@@ -4,6 +4,7 @@ namespace PlantStore.DTOs
 {
     public class ProductDisplayViewModel
     {
+        public int ProductId { get; set; }
         public string Name { get; set; } = default!;
         public string Description { get; set; } = default!;
         public byte[] Picture { get; set; }
