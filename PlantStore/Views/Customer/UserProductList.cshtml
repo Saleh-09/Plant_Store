@@ -34,7 +34,6 @@
                     <div class="product-name">@product.Name</div>
                     <div class="product-description">@product.Description</div>
                     <div class="product-price">Price: Rs @product.Price</div>
-                    <div class="product-stock">Stock: @product.Stock</div>
                     <form asp-action="AddToCart" asp-controller="Cart" method="post">
                         <input type="hidden" name="productId" value="@product.ProductId" />
                         <button type="submit" class="add-to-cart-btn">Add to Cart</button>
